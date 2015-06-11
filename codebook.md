@@ -26,5 +26,5 @@ In total, eight raw data files have been used in this course project:
 - y-train.txt
 
 ## Processed data: 
-The 3 test and 3 train files have been merged forming two data frames containing subject ids, all the gyroscope measurements (features) and the activity performed. These two data frames have again been combined into one big master data frame (named "complete" in the R script). The feature names from features.txt have been used to form the column headings for the measurements. "Subject" and "activity" columns have been labeled accordingly. Activity numbers have been replaced by activity names from activity-labels.txt. Only measurement columns containing means (column name contains "-means") and standard deviations (column name contains "-std") have been kept. All other measurement columns have been dropped. A summarizing data set showing means for all means and std measurements for each subject-activity-combination (180 rows in total) has been created and saved to disc.
+For each subject-activity-combination (180 rows) a 79-feature-table containing the summarizing means for all means- and standard deviation-measurements is provided.
 
