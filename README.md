@@ -13,7 +13,7 @@ README.md is this file.
 averages.txt is the output file asked for in the Course Project Description.
 
 ## Important:
-If you view the averages.txt in programs like notepad or your browser, it might not look very tidy in the beginning. This is not a fault of my script but of the program used for viewing it. To make sure that my script really produces a tidy data set you can open it in R. The code used for doing this would be
+If you view the averages.txt in programs like notepad or in your browser (e. g. in the Coursera Course Project page), it might not look very tidy in the beginning. This is not a fault of my script but of the program used for viewing it. To make sure that my script really produces a tidy data set you can open it in R. The code used for doing this would be
 
 averages <- read.table(file, header = TRUE)
 
