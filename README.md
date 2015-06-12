@@ -15,8 +15,6 @@ averages.txt is the output file asked for in the Course Project Description.
 ## Important:
 If you view the averages.txt in programs like notepad or in your browser (e. g. in the Coursera Course Project page), it might not look very tidy in the beginning. This is not a fault of my script but of the program used for viewing it. To make sure that my script really produces a tidy data set you can open it in R. The code used for doing this would be
 
-averages <- read.table(file, header = TRUE)
+averages <- read.table("https://github.com/MirkoHerzner/GCD-Course-Project/blob/master/averages.txt", header = TRUE)
 
 View(averages)
-
-Make sure to replace the "file" with the path/filename you saved it to.
