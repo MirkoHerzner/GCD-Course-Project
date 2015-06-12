@@ -15,6 +15,8 @@ For each record in the dataset it is provided:
 - Its activity label. 
 - An identifier of the subject who carried out the experiment.
 
+No unit of measures is reported as all features were normalized and bounded within [-1,1].
+
 In total, eight raw data files have been used in this course project:
 - activity-labels.txt
 - features.txt
@@ -26,6 +28,7 @@ In total, eight raw data files have been used in this course project:
 - y-train.txt
 
 ## Detailed description about the operations performed
+The raw data sets are processed with the run_analisys.R script to create a tidy data set.
 The 3 test and 3 train files have been merged forming two data frames containing subject ids, all the measurements (features) and the activities performed. These two data frames have again been combined into one big master data frame (named "complete" in the R script). The feature names from features.txt have been used to form the column headings for the measurements. "Subject" and "activity" columns have been labeled accordingly. Activity numbers have been replaced by activity names from activity-labels.txt. Only measurement columns containing means (column name contains "-means") and standard deviations (column name contains "-std") have been kept. All other measurement columns have been dropped. A summarizing data set showing averages for all means and std measurements for each subject-activity-combination (180 rows in total) has been created and saved to disc.
 
 ## Variables
