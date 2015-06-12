@@ -25,6 +25,18 @@ In total, eight raw data files have been used in this course project:
 - y-test.txt
 - y-train.txt
 
-## Processed data: 
-For each subject-activity-combination (180 rows) a 79-feature-table containing the summarizing means for all means- and standard deviation-measurements is provided.
+## Detailed description about the operations performed
+The 3 test and 3 train files have been merged forming two data frames containing subject ids, all the measurements (features) and the activities performed. These two data frames have again been combined into one big master data frame (named "complete" in the R script). The feature names from features.txt have been used to form the column headings for the measurements. "Subject" and "activity" columns have been labeled accordingly. Activity numbers have been replaced by activity names from activity-labels.txt. Only measurement columns containing means (column name contains "-means") and standard deviations (column name contains "-std") have been kept. All other measurement columns have been dropped. A summarizing data set showing averages for all means and std measurements for each subject-activity-combination (180 rows in total) has been created and saved to disc.
 
+## Variables
+- readvec is a vector repeating the sequence "(-1,15)" 561 times. It is used to read in the fixed length files X-test.txt and X-train.txt.
+- xtrain, ytrain, xtest, ytest, strain and stest contain the data from the downloaded files.
+- test, train and complete merge the previous datasets.
+- features contains the correct names for the complete dataset, which are applied to the column names.
+- activities contains the correct activity labels for the complete dataset, which are applied to the activity values.
+- toMatch is a vector used to drop any column not containing either "subject", "activity", "-mean" or "-std". The result ist stored in meanstd.
+- final is the final data set before summarizing the data for the output file. 
+- averages contains the relevant averages which will be later stored in a .txt file. The dplyr package is used to create the summarizing output file.
+
+## Processed data: 
+For each subject-activity-combination (180 rows) a 79-feature-table containing the summarizing averages for all means- and standard deviation-measurements is provided.
